@@ -1,7 +1,6 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const axios = require('axios')
 const geocode = require('./utlis/geocode')
 const forecast = require('./utlis/forecast')
 
