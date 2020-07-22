@@ -6,6 +6,7 @@ const geocode = require('./utlis/geocode')
 const forecast = require('./utlis/forecast')
 
 const app = express() 
+const port = process.env.PORT || 3000 
 
 // define paths for express config
 const  publicdirPath = path.join(__dirname,'../public')
@@ -27,12 +28,12 @@ app.get('',(req , res)=>{
     })
 })
 
-app.get('/about',(req ,res )=>{
-    res.render('about',{
-        title: 'About',
-        name: 'Jindal Softwares'
-    })
-})
+// app.get('/about',(req ,res )=>{
+//     res.render('about',{
+//         title: 'About',
+//         name: 'Jindal Softwares'
+//     })
+// })
 app.get('/help',(req ,res )=>{
     res.render('help',{
         title: 'Help',
@@ -86,6 +87,6 @@ app.get('*' ,(req , res) =>{
     })
 })
 
-app.listen(3000 ,()=>{
-    console.log('server is running on port 3000')
+app.listen(port ,()=>{
+    console.log('server is running on port'+ port)
 })
