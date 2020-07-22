@@ -33,13 +33,13 @@ app.get('/about',(req ,res )=>{
         name: 'Jindal Softwares'
     })
 })
-app.get('/help',(req ,res )=>{
-    res.render('help',{
-        title: 'Help',
-        name :'Jindal Softwares',
-        helpText: 'this is some helpful text'
-    })
-})
+// app.get('/help',(req ,res )=>{
+//     res.render('help',{
+//         title: 'Help',
+//         name :'Jindal Softwares',
+//         helpText: 'this is some helpful text'
+//     })
+// })
 
 app.get('/products',(req , res) =>{
     if(!req.query.search)

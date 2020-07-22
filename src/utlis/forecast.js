@@ -6,11 +6,11 @@
     axios.get(url , {json:true})
      .then((response)=>{
        // const data = JSON.parse(response)
-              callback(undefined, response.data.current.weather_descriptions+ 
-                             '. It is currently  ' + response.data.current.temperature +
-                          ' degress out. There is a ' + response.data.current.precip + '% chance of rain.' 
-                          + "\r\n" + ' Wind Speed :' +response.data.current.wind_speed+'km/h. Humidity :'
-                          + response.data.current.humidity+ '%.' )
+              callback(undefined,
+                 response.data.current.weather_descriptions[0]+ ". It is currently " + response.data.current.temperature + " degress out. It feels like " +
+                 response.data.current.feelslike +" degree out. \n There is a " + response.data.current.precip + "% chance of rain." 
+                            + "The Wind Speed is :" +response.data.current.wind_speed+"km/h. The Humidity is:"
+                          + response.data.current.humidity+ "%." )
                         //console.log(response.data)
                    
       }).catch((error) => {
